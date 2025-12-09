@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
 * {
     margin: 0;
 }
@@ -8,11 +10,14 @@ body{
 
 header {
     h4 {
-        font-size: 21px;
+        font-size: 28px;
+        z-index: 1;
+        font-family: 'Cormorant Garamond', sans-serif;
     }
 
     h5 {
-        font-size: 23px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px;
         color: white;
         background-color: rgb(218, 75, 75);
         border-radius: 20px;
@@ -23,11 +28,16 @@ header {
     }
 }
 
+footer{
+    height: 150px;
+    background-color: rgb(183, 137, 85);
+}
+
 #main_box{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 70%;
+    width: 65%;
     height: 1300px;
     margin-top: 70px;
     justify-self: center;
@@ -36,9 +46,39 @@ header {
 
 #slider_placeholder {
     height: 80%;
-    width: 12%;
+    width: 230px;
+    min-width: 150px;
     background-color: #ffd8c8;
     border-radius: 45px;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.386));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    button{
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 80px;
+        color: #d1a896;
+        margin: 10%;
+    }
+    button:hover{
+        color: #947365;
+    }
+
+    p {
+        font-family: 'Cormorant Garamond', sans-serif;
+        font-size: 30px;
+        color: rgb(121, 89, 53);
+    }
+    p:hover{
+        background-color: #d1a896;
+        padding: 20px;
+        border-radius: 20px;
+    }
 }
 
 #right_box {
@@ -62,19 +102,23 @@ header {
     border-radius: 25px;
     width: 60%;
     margin-right: 2%;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.386));
     input {
         font-size: 45px;
         background: none;
         border: none;
+    }
+    input:focus{
+        border: none;
+        outline: none;
     }
 }
 
 #coffee_box {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1%;
+    gap: 5%;
 }
 
 #zoomg_icon {
@@ -82,20 +126,27 @@ header {
 }
 
 #bell_icon {
-    background-color: rgb(179, 128, 71);
-    padding: 20px;
-    border-radius: 50px;
+    background-color: rgb(183, 137, 85);
+    padding: 25px;
+    border-radius: 60px;
+    position: relative;
+    left: 2.3%;
 }
 
 .coffee_box_instance {
     margin-top: 40px;
-    height: 530px;
-    width: 24%;
+    height: 600px;
+    width: 30%;
     background-color: #fad3c2;
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 40px;
+    filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.386));
+}
+
+.coffee_box_instance:hover{
+    outline: 5px solid rgb(183, 137, 85);
 }
 
 .inner_coffee_box {
@@ -106,14 +157,17 @@ header {
     width: 85%;
     height: 90%;
     border-radius: 40px;
+    font-family: 'Cormorant Garamond', sans-serif;
     img {
-        height: 75%;
+        height: 70%;
         width: 100%;
         border-radius: 30px;
-        margin-bottom: 3%;
+        margin-bottom: 5%;
     }
     h2{
-        font-size: 30px;
+        font-size: 40px;
+        font-weight: 400;
+        color: rgb(56, 41, 24);
     }
 }
 
@@ -121,4 +175,28 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    height: 25%;
+}
+
+.price_tag {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 35px;
+    font-weight: bolder;
+    background-color: rgb(244, 244, 244);
+    border-radius: 15px;
+    gap: 10px;
+
+    padding-left: 35px;
+    
+    #plus {
+        background-color: rgb(205, 77, 77);
+        border-radius: 15px;
+        padding: 6px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'Courier New', Courier, monospace;
+    }
 }
