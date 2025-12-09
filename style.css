@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+}
+
+body{
+    background-color: #edc4b3
+}
+
+header {
+    h4 {
+        font-size: 21px;
+    }
+
+    h5 {
+        font-size: 23px;
+        color: white;
+        background-color: rgb(218, 75, 75);
+        border-radius: 20px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+#main_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 70%;
+    height: 1300px;
+    margin-top: 70px;
+    justify-self: center;
+    gap: 40px;
+}
+
+#slider_placeholder {
+    height: 80%;
+    width: 12%;
+    background-color: #ffd8c8;
+    border-radius: 45px;
+}
+
+#right_box {
+    height: 100%;
+    width: 100%;
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+#search_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #d1a896;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    width: 60%;
+    margin-right: 2%;
+    input {
+        font-size: 45px;
+        background: none;
+        border: none;
+    }
+}
+
+#coffee_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+#zoomg_icon {
+
+}
+
+#bell_icon {
+    background-color: rgb(179, 128, 71);
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.coffee_box_instance {
+    margin-top: 40px;
+    height: 530px;
+    width: 24%;
+    background-color: #fad3c2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.inner_coffee_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 85%;
+    height: 90%;
+    border-radius: 40px;
+    img {
+        height: 75%;
+        width: 100%;
+        border-radius: 30px;
+        margin-bottom: 3%;
+    }
+    h2{
+        font-size: 30px;
+    }
+}
+
+.column_between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
