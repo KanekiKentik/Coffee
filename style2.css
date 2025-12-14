@@ -20,7 +20,17 @@ body {
 }
 
 button {
-    background-color: white;
+    background: 
+        linear-gradient(
+            135deg,
+            #F7E7CE 0%, #E6D3B3 25%, #D4B483 50%, 
+            #8B4513 75%, #5D2906 100%
+        ),
+        white;
+    background-size: 100% 0%, cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
     border-radius: 30px;
     padding: 15px;
     outline: none;
@@ -31,10 +41,15 @@ button {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    transition: 1s ease;
 }
 
 button:hover{
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(238, 237, 237);
+}
+
+button.picked {
+    background-size: 100% 100%, cover;
 }
 
 h1{
@@ -133,12 +148,10 @@ p{
             width: 95%;
             height: 85%;
             margin: 0 auto;
+            overflow-y: auto;
+            padding-right: 20px;
 
-            h3{
-                font-size: 50px;
-            }
-
-            #order_instance{
+            .order_instance{
                 margin-top: 20px;
                 height: 15%;
                 width: 100%;
@@ -238,6 +251,8 @@ p{
 #price_and_switch{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
     margin-top: 60px;
     align-items: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -245,6 +260,7 @@ p{
     h2{
         font-size: 70px;
         font-weight: 500;
+        font-family: 'Cormorant Garamond';
     }
 
     button{
@@ -384,13 +400,14 @@ p{
     left: -10%;
     filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.386));
     margin-top: 120px;
-    margin-right: 150px;
+    margin-right: 5%;
 }
 
 #coffee_box {
     font-display: flex;
     flex-direction: column;
     margin-top: 20px;
+    width: 40%;
 }
 
 #switch {

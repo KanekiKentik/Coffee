@@ -30,6 +30,11 @@ header {
 footer{
     height: 150px;
     background-color: rgb(183, 137, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
 }
 
 button{
@@ -41,10 +46,11 @@ button{
     flex-direction: row;
     justify-content: flex-start;
     width: 65%;
-    height: 1300px;
+    height: min-content;
     margin-top: 70px;
     justify-self: center;
     gap: 40px;
+    margin-bottom: 80px;
 }
 
 .slide_panel.on{
@@ -119,12 +125,10 @@ button{
             width: 95%;
             height: 85%;
             margin: 0 auto;
+            overflow-y: auto;
+            padding-right: 20px;
 
-            h3{
-                font-size: 50px;
-            }
-
-            #order_instance{
+            .order_instance{
                 margin-top: 20px;
                 height: 15%;
                 width: 100%;
@@ -200,7 +204,7 @@ button{
 }
 
 #slider_placeholder {
-    height: 80%;
+    height: 800px;
     width: 230px;
     min-width: 150px;
     background-color: white;
@@ -209,27 +213,26 @@ button{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
-    button{
-        background: none;
-        outline: none;
-        border: none;
-        font-size: 80px;
-        color: rgb(183, 137, 85);
-        margin: 10%;
-    }
     button:hover{
         color: rgb(167, 124, 74);
     }
 
-    p {
+    button.picked{
+        background-color: rgb(211, 151, 83);
+    }
+
+    button {
+        background: none;
+        border: none;
         font-family: 'Cormorant Garamond', sans-serif;
         font-size: 30px;
         color: rgb(121, 89, 53);
         width: 100%;
         text-align: center;
+        border-radius: 20px;
     }
     p:hover{
         background-color: rgb(183, 137, 85);
@@ -248,7 +251,7 @@ button{
     }
 }
 
-#search_div {
+.search_div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -264,6 +267,7 @@ button{
         font-size: 45px;
         background: none;
         border: none;
+        width: calc(100% - 40px);
     }
     input:focus{
         border: none;
@@ -271,11 +275,16 @@ button{
     }
 }
 
+.search_div.red{
+    border: 2px solid rgb(190, 6, 6);
+}
+
 #coffee_box {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5%;
+    height: min-content;
 }
 
 #order_panel {
@@ -305,7 +314,7 @@ button{
 .coffee_box_instance {
     margin-top: 40px;
     width: 30%;
-    aspect-ratio: 2/3;
+    aspect-ratio: 3/4.2;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -328,10 +337,11 @@ button{
     border-radius: 40px;
     font-family: 'Cormorant Garamond', sans-serif;
     img {
-        height: 70%;
         width: 100%;
+        aspect-ratio: 1;
         border-radius: 30px;
         margin-bottom: 5%;
+        object-fit: cover;
     }
     h2{
         font-size: 40px;
@@ -345,7 +355,7 @@ button{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 25%;
+    height: 100%;
 }
 
 .price_tag {
@@ -360,7 +370,7 @@ button{
 
     padding-left: 35px;
 
-    a{
+    button{
         border-radius: 15px;
         font-size: 30px;
         font-family: 'Courier New', Courier, monospace;
@@ -376,7 +386,7 @@ button{
         color: black;
     }
 
-    a:hover{
+    button:hover{
         background-color: rgb(184, 60, 60);
     }
 }
